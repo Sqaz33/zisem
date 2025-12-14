@@ -35,7 +35,7 @@ services:
     user: root
     volumes:
       - ./logstash/pipeline:/usr/share/logstash/pipeline
-      - ./variant02_linux_syslog_auth.log:/data/variant02_linux_syslog_auth.log:ro
+      - ./variant06_windows_security.log:/data/variant06_windows_security.log:ro
     command: >
       bash -c "
       logstash -f /usr/share/logstash/pipeline/logstash.conf
@@ -54,7 +54,7 @@ services:
             filebeat -e"
     volumes:
       - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml
-      - ./variant02_linux_syslog_auth.log:/data/variant02_linux_syslog_auth.log:ro
+      - ./variant06_windows_security.log:/data/variant06_windows_security.log:ro
     depends_on:
       - logstash
     networks:
