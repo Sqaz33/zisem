@@ -1,0 +1,12 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /data/variant02_linux_syslog_auth.log
+    fields:
+      log_type: linux_syslog_auth
+    fields_under_root: true
+    start_position: beginning
+
+output.logstash:
+  hosts: ["logstash:5044"]
