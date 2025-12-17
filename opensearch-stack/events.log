@@ -1,0 +1,80 @@
+2025-03-25 01:37:56 WIN-FILE01 Security 4624 An account was successfully logged on.
+Subject:
+    Security ID: S-1-5-18
+    Account Name: WIN-FILE01$
+    Account Domain: LAB
+    Logon ID: 0x2b6a3
+Logon Type:                   4 (Batch)
+New Logon:
+    Security ID: S-1-5-21-3691174529-2830510598-3473210335-1001
+    Account Name: service_sql
+    Account Domain: LAB
+    Logon ID: 0x45feb
+Network Information:
+    Workstation Name: WS-02
+    Source Network Address: 10.0.0.197
+    Source Port: 36026
+
+2025-03-25 20:55:52 WIN-DC01 Security 4625 An account failed to log on.
+Subject:
+    Security ID: S-1-0-0
+    Account Name: -
+    Account Domain: -
+    Logon ID: 0x0
+Logon Type:                   2 (Interactive)
+Account For Which Logon Failed:
+    Security ID: S-1-0-0
+    Account Name: administrator
+    Account Domain: CORP
+Failure Information:
+    Status: 0xC000006A
+    Sub Status: 0xC000006A
+Network Information:
+    Workstation Name: WS-02
+    Source Network Address: 203.0.113.19
+    Source Port: 64008
+
+2025-03-25 16:17:33 WIN-DC01 Security 4688 A new process has been created.
+Subject:
+    Security ID: S-1-5-21-3539357048-3662381215-1275178750-1586
+    Account Name: eva
+    Account Domain: CORP
+    Logon ID: 0x96eff
+New Process:
+    New Process ID: 0x762
+    New Process Name: C:\Program Files\7-Zip\7z.exe
+Token Elevation Type: TokenElevationTypeDefault (1)
+Creator Process:
+    Process ID: 0x2182
+    Process Name: C:\Windows\System32\winlogon.exe
+
+2025-03-26 03:02:58 WIN-FILE01 Security 4634 An account was logged off. 
+Subject:
+    Security ID: S-1-5-21-3850043007-4258579386-4017118658-1058
+    Account Name: service_sql
+    Account Domain: TEST
+    Logon ID: 0x93217
+
+2025-03-26 05:01:40 WIN-FILE01 Security 4672 Special privileges assigned to new logon.
+Subject:
+    Security ID: S-1-5-21-1775874230-3013062504-1903249717-1385
+    Account Name: secadmin
+    Account Domain: LAB
+    Logon ID: 0x3ab96
+Privileges:
+    SeImpersonatePrivilege
+    SeRestorePrivilege
+
+2025-03-25 02:50:18 WIN-FILE01 Security 4720 A user account was created.
+Subject:
+    Security ID: S-1-5-21-3195222303-1601660169-3300179912-500
+    Account Name: admin
+    Account Domain: CORP
+    Logon ID: 0x2c05e
+New Account:
+    Security ID: S-1-5-21-1705822356-4259295729-3649695745-1115
+    Account Name: user696
+Attributes:
+    SAM Account Name: user696
+    Display Name: 
+    User Principal Name: user696@corp.local

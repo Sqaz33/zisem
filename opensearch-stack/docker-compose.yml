@@ -4,7 +4,7 @@ services:
     container_name: opensearch
     environment:
       - discovery.type=single-node
-      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=Password1234!!
+      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=YourStrongPassword1!
       - plugins.security.ssl.http.enabled=false
     ulimits:
       memlock:
@@ -35,7 +35,7 @@ services:
     user: root
     volumes:
       - ./logstash/pipeline:/usr/share/logstash/pipeline
-      - ./variant06_windows_security.log:/data/variant06_windows_security.log:ro
+      - ./logstash/GeoLite2-City.mmdb:/usr/share/logstash/GeoLite2-City.mmdb
     command: >
       bash -c "
       logstash -f /usr/share/logstash/pipeline/logstash.conf

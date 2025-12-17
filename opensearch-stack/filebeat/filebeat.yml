@@ -2,15 +2,20 @@ filebeat.inputs:
 - type: log
   enabled: true
   paths:
-    - /data/variant02_linux_syslog_auth.log
+    - /data/variant06_windows_security.log
   fields:
-    log_type: linux_syslog_auth
+    log_type: windows-security
   fields_under_root: true
   start_position: beginning
-  ignore_older: 0      
-  scan_frequency: 10s  
-  close_inactive: 1h   
-  clean_inactive: 0    
+  ignore_older: 0
+  scan_frequency: 10s
+  close_inactive: 1h
+  clean_inactive: 0
+
+  multiline.type: pattern
+  multiline.pattern: '^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}'
+  multiline.negate: true
+  multiline.match: after
 
 output.logstash:
   hosts: ["logstash:5044"]
